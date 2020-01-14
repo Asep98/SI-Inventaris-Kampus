@@ -1,0 +1,9 @@
+<?
+public function checkdata($tb,$cond,$val){
+         $query = $this->db->from($tb)->where($cond,$val)->get();
+        if($query->num_rows() > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
